@@ -46,7 +46,7 @@ fun main() {
 
         val producto = Producto(codigo, nombre, precio, cantidadStock)
         productos.add(producto)
-        println("Producto creado exitosamente.")
+        println("Producto creado exitosamente")
     }
 
 
