@@ -2,13 +2,13 @@ class Producto(
     val codigo: String,
     var nombre: String,
     var precio: Double,
-    var cantidadStock: Int
+    var cantidadDis: Int
 ) {
 
 
     fun venderProducto(cantidad: Int) {
-        if (cantidadStock >= cantidad) {
-            cantidadStock -= cantidad
+        if (cantidad >= cantidad) {
+            cantidadDis -= cantidad
             println("Se vendieron $cantidad unidades de $nombre.")
         } else {
             println("No hay stock de $nombre para vender $cantidad unidades.")
@@ -16,8 +16,8 @@ class Producto(
     }
 
 
-    fun reponerStock(cantidad: Int) {
-        cantidadStock += cantidad
+    fun reponer(cantidad: Int) {
+        cantidadDis += cantidad
         println("Se repusieron $cantidad unidades de $nombre.")
     }
 
@@ -29,7 +29,7 @@ class Producto(
 
 
     fun mostrarInformacion() {
-        println("Código: $codigo, Nombre: $nombre, Precio: $precio, Stock: $cantidadStock")
+        println("Código: $codigo, Nombre: $nombre, Precio: $precio, Stock: $cantidadDis")
     }
 
 
@@ -40,7 +40,7 @@ class Producto(
 
 
     fun calcularValorTotalInventario(): Double {
-        return cantidadStock * precio
+        return cantidadDis* precio
     }
 
     companion object { // definir métodos y propiedades que no dependen de una instancia específica de la clase

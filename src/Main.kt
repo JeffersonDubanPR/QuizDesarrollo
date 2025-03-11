@@ -73,7 +73,7 @@ fun main() {
         if (producto != null) {
             print("Ingrese la cantidad a reponer: ")
             val cantidad = readLine()?.toIntOrNull() ?: 0
-            producto.reponerStock(cantidad)
+            producto.reponer(cantidad)
         } else {
             println("No se encontró ningún producto con el código $codigo.")
         }
